@@ -8,17 +8,19 @@ import android.widget.Toast
 import androidx.core.view.ViewCompat
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.snackbar.Snackbar
+import dagger.android.support.DaggerFragment
 import java.lang.reflect.ParameterizedType
+import javax.inject.Inject
 
-abstract class BaseFragment<V : BaseViewModel, B : ViewDataBinding> : Fragment(),
+abstract class BaseFragment<V : BaseViewModel, B : ViewDataBinding> : DaggerFragment(),
     BaseViewGroup<V, B> {
     var rootView: View? = null
     override lateinit var binding: B
 
+    @Inject
     override lateinit var viewModelFactory: ViewModelProvider.Factory
 
     override val viewModel: V by lazy {
