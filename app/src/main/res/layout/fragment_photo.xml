@@ -55,6 +55,7 @@
                 android:clipToPadding="false"
                 android:orientation="vertical"
                 android:padding="10dp"
+                app:photo_adapter="@{viewModel.photosLiveData}"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
