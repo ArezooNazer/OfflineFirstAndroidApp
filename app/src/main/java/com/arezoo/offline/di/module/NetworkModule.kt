@@ -85,10 +85,10 @@ class NetworkModule {
         return Headers.Builder().apply {
             add("Content-Type", "application/json")
             add("Accept", "application/json")
-            add(
-                "User-Agent",
-                "${BuildConfig.VERSION_NAME};${Build.MANUFACTURER};${Build.MODEL};Android-${Build.VERSION.RELEASE}"
-            )
+//            add(
+//                "User-Agent",
+//                "${BuildConfig.VERSION_NAME};${Build.MANUFACTURER};${Build.MODEL};Android-${Build.VERSION.RELEASE}"
+//            )
         }.build()
     }
 
