@@ -15,6 +15,6 @@ class GetPhotosUseCase @Inject constructor(
 ) : RemoteUseCase<Int, List<Photo>>(handler) {
 
     override fun execute(input: Int): Observable<List<Photo>> {
-        return repository.getPhotosFromRemote(offset = input, limit = PAGE_LIMIT)
+        return repository.getPhotos(offset = input, limit = PAGE_LIMIT)
     }
 }

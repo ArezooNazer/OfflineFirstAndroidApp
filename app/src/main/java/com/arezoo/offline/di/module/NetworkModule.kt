@@ -60,7 +60,7 @@ class NetworkModule {
             addInterceptor { chain ->
                 val request = chain.request().newBuilder()
                     .headers(getJsonHeader())
-                    .cacheControl(getCacheControl(application))
+//                    .cacheControl(getCacheControl(application))//todo: temporary removed to check offline first
                     .build()
                 chain.proceed(request)
             }
