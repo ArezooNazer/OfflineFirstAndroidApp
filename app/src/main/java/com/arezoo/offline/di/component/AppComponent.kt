@@ -3,6 +3,7 @@ package com.arezoo.offline.di.component
 import android.app.Application
 import com.arezoo.offline.di.module.ActivityModule
 import com.arezoo.offline.di.module.ApplicationModule
+import com.arezoo.offline.di.module.DatabaseModule
 import com.arezoo.offline.di.module.NetworkModule
 import com.arezoo.offline.presentation.MainApplication
 import dagger.BindsInstance
@@ -16,7 +17,8 @@ import javax.inject.Singleton
         AndroidInjectionModule::class,
         ApplicationModule::class,
         ActivityModule::class,
-        NetworkModule::class
+        NetworkModule::class,
+        DatabaseModule::class
     ]
 )
 interface AppComponent {

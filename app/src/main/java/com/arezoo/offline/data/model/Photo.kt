@@ -1,12 +1,16 @@
 package com.arezoo.offline.data.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
+@Entity
 data class Photo(
-    @SerializedName("albumId")
-    var albumId: Int? = null,
+    @PrimaryKey
     @SerializedName("id")
     var id: Int? = null,
+    @SerializedName("albumId")
+    var albumId: Int? = null,
     @SerializedName("title")
     var title: String? = null,
     @SerializedName("url")
