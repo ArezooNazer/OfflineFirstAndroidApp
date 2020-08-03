@@ -34,4 +34,5 @@ ext{
     rxKotlinVersion="2.3.0"
     daggerVersion = "2.26"
     roomVersion = "2.2.5"
+    nav_version = "2.3.0"
 }
