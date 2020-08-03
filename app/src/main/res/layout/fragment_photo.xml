@@ -8,7 +8,7 @@
 
         <variable
             name="viewModel"
-            type="com.arezoo.offline.presentation.base.BaseViewModel" />
+           type="com.arezoo.offline.presentation.main.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
