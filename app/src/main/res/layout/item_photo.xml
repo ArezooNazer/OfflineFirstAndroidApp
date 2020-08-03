@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="photo"
+            type="com.arezoo.offline.data.model.Photo" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_photo_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="ltr"
+        android:minHeight="@dimen/item_photo_container_h"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/item_photo_avatar"
+            android:layout_width="@dimen/item_photo_size"
+            android:layout_height="@dimen/item_photo_size"
+            android:padding="10dp"
+            app:glide_circle="@{photo.url}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/item_photo_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/item_photo_padding"
+            android:paddingEnd="@dimen/item_photo_padding"
+            android:gravity="left"
+            android:textSize="13sp"
+            android:lineSpacingExtra="@dimen/line_space"
+            android:text="@{photo.title}"
+            app:layout_constraintEnd_toStartOf="@id/arrow"
+            app:layout_constraintStart_toEndOf="@id/item_photo_avatar"
+            app:layout_constraintTop_toTopOf="@id/item_photo_avatar"
+            app:layout_constraintBottom_toBottomOf="@id/item_photo_avatar"
+            tools:text="assumenda voluptatem laboriosam reiciendis error" />
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="16dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_point_to_right"
+            app:layout_constraintTop_toTopOf="@id/item_photo_title"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

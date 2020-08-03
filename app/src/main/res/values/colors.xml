@@ -2,4 +2,5 @@
     <color name="colorPrimary">#df0f50</color>
     <color name="colorPrimaryDark">#c90e49</color>
     <color name="colorAccent">#484b62</color>
+    <color name="list_divider">#cccccc</color>
 </resources>
