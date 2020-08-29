@@ -9,7 +9,8 @@ import retrofit2.http.Query
 interface APIs {
 
     @GET("photos")
-    fun getPhotos(@Query("_start") start: Int,
-                  @Query("_limit") limit: Int
-    ): Observable<List<Photo>>
+    fun getPhotos(
+        @Query("_start") start: Int,
+        @Query("_limit") limit: Int
+    ): List<Photo>
 }

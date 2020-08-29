@@ -9,6 +9,6 @@ import javax.inject.Inject
 class PhotoRepositoryImpl @Inject constructor(private val service: APIs) : PhotoRepository {
 
     override fun getPhotosFromRemote(offset: Int, limit: Int): Observable<List<Photo>> {
-        return service.getPhotos(start = offset, limit = limit)
+//        return Observable.fromCallable { service.getPhotos(start = offset, limit = limit) }
     }
 }
