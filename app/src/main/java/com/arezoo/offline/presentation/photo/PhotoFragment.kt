@@ -20,6 +20,7 @@ class PhotoFragment : BaseFragment<MainViewModel, FragmentPhotoBinding>() {
     private val adapter: PhotoItemAdapter by lazy {
         PhotoItemAdapter(object : PhotoAdapterListener {
             override fun onPhotoItemClick(photo: Photo) {
+                showToast(photo.title.toString())
             }
         })
     }

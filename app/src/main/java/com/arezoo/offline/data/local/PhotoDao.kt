@@ -10,8 +10,8 @@ import com.arezoo.offline.data.model.Photo
 interface PhotoDao {
 
     @Insert(onConflict = REPLACE)
-    fun insertPhotoToDb(photo: Photo)
+     fun insertPhotoToDb(photos: List<Photo>)
 
-    @Query("SELECT * FROM PHOTO")
-    fun getPhotos(): List<Photo>
+    @Query("SELECT * FROM PHOTO LIMIT :limit OFFSET :offset")
+     fun getPhotos(offset: Int, limit: Int): List<Photo>
 }

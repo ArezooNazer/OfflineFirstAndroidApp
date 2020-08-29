@@ -60,7 +60,7 @@ class NetworkModule {
             addInterceptor { chain ->
                 val request = chain.request().newBuilder()
                     .headers(getJsonHeader())
-                    .cacheControl(getCacheControl(application))
+//                    .cacheControl(getCacheControl(application))
                     .build()
                 chain.proceed(request)
             }

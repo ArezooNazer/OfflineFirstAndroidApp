@@ -25,14 +25,6 @@ open class BaseViewModel : ViewModel() {
 
     }
 
-    open fun showConnectionError() {
-        networkError.set(true)
-    }
-
-    open fun hideConnectionError() {
-        networkError.set(false)
-    }
-
     fun setErrorMessage(message: String) {
         errorTextMessage.value = message
     }
